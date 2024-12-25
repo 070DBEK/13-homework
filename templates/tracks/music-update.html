@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Music - MusicVideoHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="glass-effect">
+        <nav>
+            <div class="logo">
+                <a href="index.html">MusicVideo<span>Hub</span></a>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="music-list.html"><i class="fas fa-music"></i> Music</a></li>
+                <li><a href="video-list.html"><i class="fas fa-video"></i> Videos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1 class="animated-text">Update Music</h1>
+            <a href="music-list.html" class="btn"><i class="fas fa-arrow-left"></i> Back to List</a>
+        </section>
+
+        <section class="music-form glass-effect">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" value="Awesome Song" required>
+                </div>
+                <div class="form-group">
+                    <label for="artist">Artist</label>
+                    <input type="text" id="artist" name="artist" value="Amazing Artist" required>
+                </div>
+                <div class="form-group">
+                    <label for="album">Album</label>
+                    <input type="text" id="album" name="album" value="Incredible Sounds">
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <input type="text" id="genre" name="genre" value="Pop">
+                </div>
+                <div class="form-group">
+                    <label for="release-date">Release Date</label>
+                    <input type="date" id="release-date" name="release-date" value="2023-06-15">
+                </div>
+                <div class="form-group">
+                    <label for="cover-image">Cover Image</label>
+                    <input type="file" id="cover-image" name="cover-image" accept="image/*">
+                    <img src="https://via.placeholder.com/100x100" alt="Current Cover" class="current-cover">
+                </div>
+                <div class="form-group">
+                    <label for="audio-file">Audio File</label>
+                    <input type="file" id="audio-file" name="audio-file" accept="audio/*">
+                    <audio controls class="current-audio">
+                        <source src="path_to_current_audio_file.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Music</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="glass-effect">
+        <p>&copy; 2023 MusicVideo<span>Hub</span>. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
