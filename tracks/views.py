@@ -5,10 +5,12 @@ from .models import Track
 def home(request):
     return render(request, 'index.html')
 
+
 def track_list(request):
     tracks = Track.objects.all()
     ctx = {'tracks': tracks}
     return render(request, 'tracks/music-list.html', ctx)
+
 
 def track_create(request):
     if request.method == 'POST':
@@ -32,6 +34,7 @@ def track_create(request):
             return redirect('tracks:list')
     return render(request, 'tracks/music-create.html')
 
+
 def track_update(request, pk):
     track = get_object_or_404(Track, pk=pk)
     if request.method == 'POST':
@@ -54,6 +57,7 @@ def track_update(request, pk):
             return redirect(track.get_detail_url())
     ctx = {'track': track}
     return render(request, 'tracks/music-create.html', ctx)
+
 
 def track_detail(request, pk):
     track = get_object_or_404(Track, pk=pk)
